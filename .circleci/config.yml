@@ -19,8 +19,8 @@ jobs:
               name: run tests
               command: |
                   . venv/bin/activate
-                  python manage.py migrate
+                  python django-basic/manage.py migrate
                   export PYTHONPATH=`pwd`
-                  python manage.py test
-                  flake8 --exclude polls/migrations/,manage.py  .
+                  python django-basic/manage.py test
+                  flake8 --exclude django-basic/polls/migrations/,manage.py  .
 
