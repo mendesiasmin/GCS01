@@ -4,6 +4,8 @@ jobs:
       working_directory: ~/GCS01/django-basic
       docker:
           - image: circleci/python:3.6.1
+            environment:
+                   PYTHONPATH: $PWD
 
       steps:
           - checkout
@@ -20,7 +22,6 @@ jobs:
               command: |
                   . venv/bin/activate
                   python django-basic/manage.py migrate
-                  export PYTHONPATH=`pwd`
                   python django-basic/manage.py test
                   flake8 --exclude django-basic/polls/migrations/,manage.py  .
 
