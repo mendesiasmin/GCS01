@@ -13,11 +13,13 @@ jobs:
                   python3 -m venv venv
                   . venv/bin/activate
                   pip install django flake8
+                  export PYTHONPATH=`pwd`; python django-basic/manage.py test
 
           - run:
               name: run tests
               command: |
+                  . venv/bin/activate
                   python django-basic/manage.py migrate
                   python django-basic/manage.py test
-                  flake8 --exclude polls/migrations/,manage.py  .
+                  flake8 --exclude django-basic/polls/migrations/,manage.py  .
 
