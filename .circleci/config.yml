@@ -17,7 +17,7 @@ jobs:
           - run:
               name: run tests
               command: |
-                  . venv/bin/activate
-                  python django-basic/manage.py migrate;
-                  python django-basic/manage.py test;
-                  flake8 --exclude polls/migrations/,manage.py  .;
+                  python django-basic/manage.py migrate
+                  python django-basic/manage.py test
+                  flake8 --exclude polls/migrations/,manage.py  .
+
