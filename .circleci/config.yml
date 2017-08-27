@@ -23,5 +23,6 @@ jobs:
                   . venv/bin/activate
                   python django-basic/manage.py migrate
                   python django-basic/manage.py test
+                  cd django-basic
                   flake8 --exclude django-basic/polls/migrations/,manage.py  .
 
