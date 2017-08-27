@@ -4,8 +4,6 @@ jobs:
       working_directory: ~/GCS01/django-basic
       docker:
           - image: circleci/python:3.6.1
-            environment:
-                   PYTHONPATH: $PWD
 
       steps:
           - checkout
