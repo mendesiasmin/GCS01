@@ -6,9 +6,4 @@ script:
   - python django-basic/manage.py migrate
   - python django-basic/manage.py test
   - flake8 --exclude polls/migrations/,manage.py  .
-  - cd django-basic
-deploy:
-  provider: heroku
-  api_key:
-    secure: o8Bg2Va8YStM1HRAcWu/FcZ/NTumkgItntNcVjUnBjatwEudl3szl+Ifgy16zT4L5tjYFI/QpikB68ZD/nbdzB8g4fBYKkn5gUPoYHZmd17ovx8gXXsQcQ2RmOwUfwaSH/QfqzDSCZueN1eGfV1evZxEg4UEWZ2XuVt/gnCfezrwX528W3VBob3vS9zqfVZM0ibfZ0B7etoYk4XJ2IHteU1jHiH7lti+gY+svEgM0sZhqLn1Ae/u5vapbqT8vl9qzswjEnJr5VkLocCEdgWbG/ZqQ7rkbdrv5WkDhxtCwKT1hBPtYPOoANhMiFANvSFFulMtG56bAEOuNlJXW06hCY5ropHy1+UKmH49N+G0W2k5MysCMbTC1d6qzK4QR55j9DLX8GeQUAnjuPa/Dlu+tdDMhsMNgs9gy3l4557OqFbWZHZ8TyieiQvpi/XUkGlrn0/jxXrUdFhEerVuGWWrDG6wN8k50QwohJaK+ARBA/PVK6gjkg6ZLrewL4SVFf0ygQhGSjy2/03HtjRFTjTmFJnERDSSoqmFB9lSVi/U1PwBuKYQMx9JFveyrUqUTSWXVzTaZO2PYvKn9Gww0V17v2Tf7RNvFW2EIVQliJ8OiC5JZx5pP4eeRz7GCH9tnS5Jfcr/E5Zg1zSYCmckO7ME+egHF7XSY6NV7H5RJF+TvBs=
-  app: gcs01-mendesiasmin-travis
+
